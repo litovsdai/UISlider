@@ -26,4 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)moveSlider:(id)sender {
+    _slider = (UISlider *)sender;
+    int progressAsInt = (int)(_slider.value + 0.5f);
+    NSString *newText = [[NSString alloc] initWithFormat:@"%d Km", progressAsInt];
+    _label.text=newText;
+}
 @end
