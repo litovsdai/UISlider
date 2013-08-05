@@ -28,7 +28,7 @@
 
 - (IBAction)moveSlider:(id)sender {
     _slider = (UISlider *)sender;
-    int progressAsInt = (int)(_slider.value + 0.5f);
+    int progressAsInt = (int)(_slider.value);
     NSString *newText = [[NSString alloc] initWithFormat:@"%d Km", progressAsInt];
     _label.text=newText;
 }
